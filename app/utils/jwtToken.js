@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const createToken = (user) => {
-    const secretKey = "mysecretkey";
+    const secretKey = "j^5&X9t#Rz@p$2sL";
 
     // Access Token ve Refresh Token süreleri (örnek olarak)
     const accessTokenExpireTime = "15m"; // 15 dakika

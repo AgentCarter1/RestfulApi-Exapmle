@@ -1,14 +1,19 @@
-module.exports = {
-  HOST: "0.0.0.0",  // Veritabanı sunucusunun IP adresi veya alan adı
-  port: '5432',      // PostgreSQL veritabanı bağlantı noktası
-  USER: "postgres",  // PostgreSQL kullanıcı adı
-  PASSWORD: "admin", // PostgreSQL şifresi
-  DB: "postgres",        // Kullanılacak veritabanının adı
-  dialect: "postgres", // Kullanılan veritabanı türü (PostgreSQL)
+
+require('dotenv').config({path:'./dbInfo.env'});
+console.log(process.env.DB_HOST);
+const config = {
+  HOST: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  USER: process.env.DB_USER,
+  PASSWORD: process.env.DB_PASSWORD,
+  DB: process.env.DB_NAME,
+  dialect: "postgres",
   pool: {
-    max: 5,           // Maksimum eş zamanlı bağlantı sayısı
-    min: 0,           // Minimum eş zamanlı bağlantı sayısı
-    acquire: 30000,   // Bağlantı elde etme (get) süresi (milisaniye cinsinden)
-    idle: 10000       // Bağlantı boşta kalma süresi (milisaniye cinsinden)
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
   }
 };
+
+module.exports = config;

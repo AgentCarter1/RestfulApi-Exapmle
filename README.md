@@ -1,16 +1,56 @@
-# Hazırlık Aşaması #
+# Hazırlık Aşaması
 
-1-) Projemizi Bilgisayarımıza indirdikten sonra, klasör içerisinde terminali açıyoruz.
-2-) Sırasıyla aşağıdaki komutları çalıştırıyoruz :
-        -> npm install bcrypt
-        -> npm install pg
-        -> npm install pg-hstore
-        -> npm install sequelize
+Bu README dosyası, projenizi başlatmadan önce yapmanız gereken hazırlık adımlarını içerir.
 
-3-) Bir veritabanına da ihtiyacımız olduğu için, bunu Docker ile çözeceğiz.
-4-) Docker Desktop uygulamasını bilgisayarımıza kurduktan sonra terminal ekranın açıp aşağıdaki komutu çalıştırıyoruz:
-        -> docker run --name mypostgre -e POSTGRES_PASSWORD=admin -p 5432:5432 -d --rm postgres
-5-) ardından dozya dizinin içerisinde konsola gelip aşağıdaki kodla projemizi çalıştırıyoruz :
-        -> npm start
+## Adım 1: Proje İndirme
 
+1. Projeyi bilgisayarınıza indirin.
+2. Klasör içinde bir terminal açın.
 
+## Adım 2: Bağımlılıkları Yükleme
+
+Proje bağımlılıklarını yüklemek için aşağıdaki komutları sırayla çalıştırın:
+
+```bash
+
+npm install bcrypt
+npm install pg
+npm install pg-hstore
+npm install sequelize
+npm install express
+npm install ioredis
+npm install jsonwebtoken
+npm install nodemon
+npm install dotenv
+
+```
+
+## Adım 3: Veritabanı Oluşturma
+
+1. Veritabanını Docker kullanarak bunu hızlıca oluşturuyoruz.
+
+2. Bilgisayarınıza Docker Desktop uygulamasını kurun.
+3. Terminali açın ve aşağıdaki komutu çalıştırın:
+
+# PostgreSQL:
+```bash
+docker run --name mypostgres -e POSTGRES_PASSWORD=admin -p 5432:5432 -d --rm postgres
+```
+# Redis:
+```bash
+docker run -p 6379:6379 redis
+```
+
+## Adım 4: Projeyi Çalıştırma
+
+1. Projenizi çalıştırmak için aşağıdaki adımları izleyin:
+
+2. Proje klasörünün içine gidin.
+
+3. Dosya dizinin içerisine gelip Terminali açın.
+
+# Aşağıdaki komutu çalıştırın:
+
+```bash
+npm start
+```

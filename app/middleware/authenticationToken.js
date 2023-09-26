@@ -3,7 +3,7 @@ const userRedis = require("../utils/userRedis")
 const authenticateToken = (req, res, next) => {
   const token = req.header("Authorization");
   //console.log(token);
-  const secretKey = "mysecretkey";
+  const secretKey = "j^5&X9t#Rz@p$2sL";
   if (!token) {
     return res.status(401).json({ message: "Token not provided" });
   }

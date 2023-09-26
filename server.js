@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true })); // URL kodunu çözmek için bo
 const db = require("./app/models"); // Veritabanı modelini içe aktarır
 const PORT = process.env.PORT || 8080; // Port numarasını ayarlar (varsayılan olarak 8080)
 
+
 // Veritabanı ile bağlantıyı kurar ve sunucuyu dinlemeye başlar
 db.sequelize.sync()
   .then(() => {
