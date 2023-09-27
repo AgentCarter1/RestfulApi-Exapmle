@@ -54,3 +54,5 @@ docker run -p 6379:6379 redis
 ```bash
 npm start
 ```
+
+<font color="red">Not: Kurlum esnasında WSL hatası alınırsa [Bu Linkten](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) Aracı indirip kurulmalı.</font>
