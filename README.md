@@ -13,15 +13,7 @@ Proje bağımlılıklarını yüklemek için aşağıdaki komutları sırayla ç
 
 ```bash
 
-npm install bcrypt
-npm install pg
-npm install pg-hstore
-npm install sequelize
-npm install express
-npm install ioredis
-npm install jsonwebtoken
-npm install nodemon
-npm install dotenv
+npm install
 
 ```
 
