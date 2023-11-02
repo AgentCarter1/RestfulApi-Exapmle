@@ -24,11 +24,11 @@ npm install
 2. Bilgisayarınıza Docker Desktop uygulamasını kurun.
 3. Terminali açın ve aşağıdaki komutu çalıştırın:
 
-# PostgreSQL:
+### PostgreSQL:
 ```bash
 docker run --name mypostgres -e POSTGRES_PASSWORD=admin -p 5432:5432 -d --rm postgres
 ```
-# Redis:
+### Redis:
 ```bash
 docker run -p 6379:6379 redis
 ```
